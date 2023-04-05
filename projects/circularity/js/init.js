@@ -26,7 +26,7 @@ var init = function (window) {
         // TODO 2 : Create a function that draws a circle 
         function drawCircle(){
              circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
-                physikz.addRandomVelocity(circle, canvas);
+                physikz.addRandomVelocity(circle, canvas, 20, 3);
                     view.addChild(circle);
                         circles.push(circle);
         }
@@ -80,6 +80,10 @@ var init = function (window) {
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
+            if(circle.x > canvas.width){
+                circle.x = 0;
+            }
+            
             
 
 
